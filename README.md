@@ -1,0 +1,5 @@
+- Hito 2
+- Comenté el Home
+- Dejé el Login visible y el Register comentado
+- En el formulario de login dejé deshabilitado el boton hasta que no ingrese datos
+- En el formulario de Register deje el boton habilitado para validar todos los datos
