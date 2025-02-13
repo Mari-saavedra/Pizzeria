@@ -1,6 +1,6 @@
 import Header from './Header'
 import CardPizza from './CardPizza'
-import { pizzaCart } from '../utils/pizzas'
+import { pizzas } from '../utils/pizzas'
 
 const Home = () => {
   return (
@@ -9,24 +9,16 @@ const Home = () => {
 
       <div className='container p-3'>
         <div className='d-flex justify-content-center gap-3 flex-wrap p-0 m-0'>
-          <CardPizza
-            name='Napolitana'
-            price={5950}
-            ingredients={['mozzarella', 'tomates', 'jamón', 'orégano']}
-            img='./src/assets/img/napolitana.jpg'
-          />
-          <CardPizza
-            name='Española'
-            price={6950}
-            ingredients={['mozzarella', 'gorgonzola', 'parmesano', 'provolone']}
-            img='./src/assets/img/española.jpg'
-          />
-          <CardPizza
-            name='Pepperoni'
-            price={6950}
-            ingredients={['mozzarella', 'pepperoni', 'orégano']}
-            img='./src/assets/img/pepperoni.jpg'
-          />
+          {pizzas.map((pizza) => (
+            <CardPizza
+              key={pizza.id}
+              img={pizza.img}
+              ingredients={pizza.ingredients}
+              name={pizza.name}
+              price={pizza.price}
+            />
+          ))}
+
         </div>
       </div>
     </>
